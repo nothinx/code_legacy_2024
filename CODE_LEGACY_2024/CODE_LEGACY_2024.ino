@@ -5,6 +5,7 @@
 #include "kompas.h"
 #include "komponen.h"
 #include "lidar.h"
+#include "algorithm.h"
 #include "kiri.h"
 // #include "prog.h"
 
@@ -14,6 +15,8 @@ bool bag = 0;
 
 int j, k, l, m, n, o, p;
 char keyInput;
+
+
 
 void setup() {
   Serial.begin(9600);
@@ -37,8 +40,11 @@ void setup() {
 }
 
 void loop() {
+
+  Serial.println(lid3);
   if (digitalRead(pb) == LOW) {
     menujuKorban1();
     ambilKorban1();
+    menujuSz1();
   }
 }

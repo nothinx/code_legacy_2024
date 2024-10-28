@@ -1,8 +1,14 @@
 int cek = 0;
 
+
+// 
+// int selatan = 185;
+// int barat = 100;
+// int timur = 260 ; 
+
 void followDindingKanan(int jarak, int lebar) {
-  int toleransi = 5;
-  int lamanya = 5;
+  int toleransi = 3;
+  int lamanya = 3;
   int selisihKanan = lid1 - lid2;  // 15-20 = -5
   int selisihPositif = toleransi;
   int selisihNegatif = -1 * toleransi;
@@ -176,42 +182,72 @@ void followDindingKiri(int jarak, int lebar) {
   lebarLangkah = 40;
 }
 
+void ikutBarat(int head){
+   while(true){
+    int sudut = bacaKompas();
+  if(sudut > 65 && sudut < 75){
+    break;
+    passData(0);
+  }
+  for (int i = 0; i < 3; i++) passData(head);
+  }
+}
 
+void ikutSelatan(int head){
+   while(true){
+    int sudut = bacaKompas();
+  if(sudut > 170 && sudut <180){
+    break;
+    passData(0);
+  }
+  for (int i = 0; i < 3; i++) passData(head);
+  }
+}
+
+void ikutTimur(int head){
+   while(true){
+    int sudut = bacaKompas();
+  if(sudut > 255 && sudut < 265){
+    break;
+    passData(0);
+  }
+  for (int i = 0; i < 3; i++) passData(head);
+  }
+}
+
+void ikutUtara(int head){
+   while(true){
+    int sudut = bacaKompas();
+  if(sudut > 0 && sudut < 10){
+    break;
+    passData(0);
+  }
+  for (int i = 0; i < 3; i++) passData(head);
+  }
+}
 
 //========================Menuju Korban 1=============================================
 void menujuKorban1() {
-  // Gerak maju sampai jarak lidar memenuhi syarat
+  ikutUtara(6);
+  
   while (lid0 < 25) {
     followDindingKanan(14, 20);
-    for (int i = 0; i < 5; i++) passData(1);  // Gerak maju
+    passData(1); 
   }
 }
 
 //========================ambil korban 1================================
-void ambilKorban1() {
-  while (true) {
-    int yaw = bacaKompas();
-    if (yaw > 95 && yaw < 105) {
-      break;  // Sudah berada pada sudut yang diinginkan
-    }
-    passData(5);  // Putar robot sampai sudut tercapai
-  }
-  delay(100);
-}
 
+void ambilKorban1() {
+  ikutBarat(5);
+}
+  
 //=========================Menuju Safe Zone 1============================
 void menujuSz1() {
-  while (true) {
-    int yaw = bacaKompas();
-    if (yaw > 330 && yaw < 340) {
-      break;  // Sudah berada pada sudut yang diinginkan
-    }
-    passData(6);  // Putar robot sampai sudut tercapai
-  }
-
-  while (lid3 > 30) {
+  ikutUtara(6);
+  while (lid3 > 20) { 
+    // ikutUtara(5);
     followDindingKanan(14, 20);
-    for (int i = 0; i < 8; i++) passData(1);  // Gerak maju
+    for(int i = 0;i<20;i++) passData(1);  // Gerak maju
   }
-  passData(0);  // Berhenti setelah mencapai sudut
 }

@@ -5,10 +5,10 @@
 
 float sudut, langkahKiri, langkahKanan, outKanan, outKiri;  //input
 float sudutF[3];
-#define utara 86 //115 //207
-#define timur 44 //140 //255
-#define selatan 54 //170 //320
-#define barat 74//84 //135
+#define utara 335 // Definisi arah utara
+#define timur 260 // Definisi arah timur
+#define selatan 185 // Definisi arah selatan
+#define barat 115 // Definisi arah barat
 int knop = 0;
 int toler = 0;
 
