@@ -245,7 +245,7 @@ void ambilKorban1() {
 //=========================Menuju Safe Zone 1============================
 void menujuSz1() {
   ikutUtara(6);
-  while (lid3 > 20) { 
+  while (lid3 > 20 && lid4 <200) { 
     // ikutUtara(5);
     followDindingKanan(14, 20);
     for(int i = 0;i<20;i++) passData(1);  // Gerak maju
