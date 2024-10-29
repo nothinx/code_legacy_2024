@@ -25,7 +25,7 @@ Adafruit_PWMServoDriver kit1 = Adafruit_PWMServoDriver(PCA9685_2_ADDR);  // Driv
 
 int lebarLangkah = 40;    // Lebar langkah per gerakan (dibagi dengan rateKu*2, hasilnya harus bilangan bulat)
                           // Misalnya, 40 dibagi (rateKu * 2) = 40 / 10 = 4 (hasil bulat, valid)
-int tinggiLangkah = 68;  // Tinggi langkah kaki saat diangkat dari tanah (dibagi rateKu harus bulat)
+int tinggiLangkah = 70;  // Tinggi langkah kaki saat diangkat dari tanah (dibagi rateKu harus bulat)
                           // Misalnya, 100 / 5 = 20 (hasil bulat, valid)
 int posisiAwal = 60;      // Posisi awal servo pada saat hexapod diam (dalam derajat servo)
 int delayKecepatan = 0;   // Delay antara pergerakan kaki, nilai ini mengontrol kecepatan gerakan hexapod
