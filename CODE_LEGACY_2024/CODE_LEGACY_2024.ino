@@ -41,10 +41,13 @@ void setup() {
 
 void loop() {
 
-  Serial.println(lid3);
+  Serial.println(lid0);
   if (digitalRead(pb) == LOW) {
     menujuKorban1();
     ambilKorban1();
     menujuSz1();
+    ikutBarat(5);
+    menujuKorban1();
+    ikutSelatan(5);
   }
 }

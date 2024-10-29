@@ -7,7 +7,7 @@ int cek = 0;
 // int timur = 260 ; 
 
 void followDindingKanan(int jarak, int lebar) {
-  int toleransi = 3;
+  int toleransi = 2;
   int lamanya = 3;
   int selisihKanan = lid1 - lid2;  // 15-20 = -5
   int selisihPositif = toleransi;
@@ -218,7 +218,7 @@ void ikutTimur(int head){
 void ikutUtara(int head){
    while(true){
     int sudut = bacaKompas();
-  if(sudut > 0 && sudut < 10){
+  if(sudut > 10 && sudut < 20){
     break;
     passData(0);
   }
@@ -230,7 +230,7 @@ void ikutUtara(int head){
 void menujuKorban1() {
   ikutUtara(6);
   
-  while (lid0 < 25) {
+  while (lid0 < 28) {
     followDindingKanan(14, 20);
     passData(1); 
   }
@@ -245,9 +245,9 @@ void ambilKorban1() {
 //=========================Menuju Safe Zone 1============================
 void menujuSz1() {
   ikutUtara(6);
-  while (lid3 > 20 && lid4 <200) { 
-    // ikutUtara(5);
+  while (lid3 > 12 && lid4 <200) { 
     followDindingKanan(14, 20);
     for(int i = 0;i<20;i++) passData(1);  // Gerak maju
+    // ikutUtara(5);
   }
 }
