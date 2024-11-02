@@ -12,7 +12,7 @@ Adafruit_PWMServoDriver kit1 = Adafruit_PWMServoDriver(PCA9685_2_ADDR);  // Driv
 // Panjang segmen kaki hexapod (dalam satuan mm)
 #define coxa 20   // Panjang segmen Coxa (paha atas dari pangkal ke sendi pertama)  // waktu dibagi dengan
 #define femur 60 // Panjang segmen Femur (paha bawah dari sendi pertama ke sendi kedua)
-#define tibia 75  // Panjang segmen Tibia (betis dari sendi kedua ke ujung kaki)
+#define tibia 80 // Panjang segmen Tibia (betis dari sendi kedua ke ujung kaki)
 
 // Ukuran dimensi tubuh hexapod (dalam satuan mm)
 #define panjangBody 78  // Panjang tubuh dari depan ke belakang (body length)
@@ -25,13 +25,13 @@ Adafruit_PWMServoDriver kit1 = Adafruit_PWMServoDriver(PCA9685_2_ADDR);  // Driv
 
 int lebarLangkah = 40;    // Lebar langkah per gerakan (dibagi dengan rateKu*2, hasilnya harus bilangan bulat)
                           // Misalnya, 40 dibagi (rateKu * 2) = 40 / 10 = 4 (hasil bulat, valid)
-int tinggiLangkah = 65;  // Tinggi langkah kaki saat diangkat dari tanah (dibagi rateKu harus bulat)
+int tinggiLangkah = 70;  // Tinggi langkah kaki saat diangkat dari tanah (dibagi rateKu harus bulat)
                           // Misalnya, 100 / 5 = 20 (hasil bulat, valid)
 int posisiAwal = 60;      // Posisi awal servo pada saat hexapod diam (dalam derajat servo)
 int delayKecepatan = 0;   // Delay antara pergerakan kaki, nilai ini mengontrol kecepatan gerakan hexapod
 
 // Offset posisi untuk menyesuaikan posisi awal atau referensi
-int Zoff = -90;  // Offset pada sumbu Z (tinggi), menyesuaikan tinggi standar kaki di atas tanah
+int Zoff = -100;  // Offset pada sumbu Z (tinggi), menyesuaikan tinggi standar kaki di atas tanah
 int Yoff = 0;     // Offset pada sumbu Y (horizontal kiri-kanan), menyesuaikan posisi kaki kiri/kanan
 int Xoff = 0;     // Offset pada sumbu X (horizontal depan-belakang), menyesuaikan posisi kaki depan/belakang
 

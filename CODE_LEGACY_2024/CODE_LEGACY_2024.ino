@@ -40,14 +40,17 @@ void setup() {
 }
 
 void loop() {
+  tampilkanData("Kompas", bacaKompas());
 
   Serial.println(lid0);
   if (digitalRead(pb) == LOW) {
+    // tampilkanData("Kompas", bacaKompas());
+
     menujuKorban1();
     ambilKorban1();
     menujuSz1();
-    ikutBarat(5);
-    menujuKorban1();
-    ikutSelatan(5);
+    // ikutBarat(5);
+    // menujuKorban1();
+    // ikutSelatan(5);
   }
 }
